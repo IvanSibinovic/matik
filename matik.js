@@ -41,6 +41,7 @@ for (var i = 0; i < answerButton.length; i++) {
 	answerButton[i].addEventListener("click", function() {
 		if(parseInt(this.textContent) === result ) {
 			document.querySelector(".correct").classList.add("rightAnswer");
+			document.querySelector(".resultDisplay").classList.add("appear");
 			setTimeout(function(){
 				reset();
 			}, 1000);
@@ -80,6 +81,7 @@ function reset () {
 	answerButton[randomSolution].textContent = result;
 
 	document.querySelector(".correct").classList.remove('rightAnswer');
+	document.querySelector(".resultDisplay").classList.remove("appear");
 	for(var i = 0; i < answerButton.length; i++){
 		answerButton[i].classList.remove('fadeOut');
 	}

@@ -5,9 +5,14 @@ body {
 }
 #equationDisplay, #resultDisplay {
 	font-size: 90px;
-
 }
-
+.resultDisplay {
+	opacity: 0;
+	transition: opacity 500ms ease-in-out;
+}
+.appear {
+	opacity: 1;
+}
 .answerButton {
 	display: inline-block;
 	width: 200px;
@@ -21,7 +26,6 @@ body {
 	cursor: pointer;
 	transition: opacity 600ms ease-in-out;
 } 
-
 .excerciseName {
 	font-size: 2em;
 }
@@ -77,57 +81,16 @@ h1 {
 	margin: 20px auto;
 }
 
-
-#stripe {
-	background-color: white;
-	height: 30px;
-	text-align: center;
-}
-
-.selected {
-	color: white;
-	background-color: steelblue;
-}
-
-button {
-	border: none;
-	background-color: white;
-	text-transform: uppercase;
-	height: 100%;
-	font-weight: 700;
-	color: steelblue;
-	letter-spacing: 1px;
-	font-size: inherit;
-	transition: all 0.3s;
-}
-
-#colorDisplay {
-	font-size: 150%;
-} 
-
-#message {
-	display: inline-block;
-	width: 20%;
-	text-transform: uppercase;
-	color: steelblue;
-	font-size: inherit;
-	font-weight: 700;
-	
-}
-
-button:hover {
-	color: white;
-	background-color: steelblue;
-}
-
-@-webkit-keyframes blinker {
-  from { opacity: 1.0; }
-  to { opacity: 0.0; }
-}
-
-.waitingForConnection {
-  -webkit-animation-name: blinker;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
-  -webkit-animation-duration: 1.7s;
+@media(max-width: 550px) {
+	.answerButton {
+		width: 150px;
+		height: 50px;
+		padding-top: 15px;
+		font-size: 30px;
+		border-radius: 7px;
+		margin: 5px;
+	}
+	h1{
+		
+	}
 }
