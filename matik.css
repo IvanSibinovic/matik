@@ -3,15 +3,15 @@ body {
 	margin: 0;
 	font-family: "Montserrat";
 }
-#equationDisplay, #resultDisplay {
+#equationDisplay, .resultDisplay {
 	font-size: 90px;
 }
 .resultDisplay {
 	opacity: 0;
-	transition: opacity 500ms ease-in-out;
 }
 .appear {
 	opacity: 1;
+	transition: opacity 500ms ease-in-out;
 }
 .answerButton {
 	display: inline-block;
@@ -34,7 +34,7 @@ body {
 	max-width: 600px;
 	margin: 20px auto;
 }
-.correct {
+.messageBox {
 	display: block;
 	z-index: -1;
 	opacity: 0;
@@ -42,7 +42,6 @@ body {
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	background-color: yellow;
 	width: 150px;
 	height: 75px;
 	padding-top: 25px;
@@ -51,6 +50,12 @@ body {
 	font-weight: bold;
 	border-radius: 10%;
     transition: all 600ms ease-in-out;
+}
+.correct {
+	background-color: yellow;
+}
+.wrong {
+	background-color: red;
 }
 .rightAnswer {
 	z-index: 2;
@@ -80,7 +85,18 @@ h1 {
 	max-width: 600px;
 	margin: 20px auto;
 }
-
+.count {
+	display: inline-block;
+	margin: 50px 5px;
+	width: 20px;
+	height: 70px;
+	border-radius: 15px;
+	background-color: #f7f7f7;
+	transition: background-color 500ms ease-in-out;
+}
+.correctAnswers {
+	background-color: #688d01;
+}
 @media(max-width: 550px) {
 	.answerButton {
 		width: 150px;
