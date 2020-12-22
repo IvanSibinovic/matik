@@ -53,7 +53,7 @@ for (var i = 0; i < answerButton.length; i++) {
 				reset();
 			}, 1000);
 			if (wrong+counter===5) {
-				alert("GOTOVO!!!");
+				roundEnd();
 				//tu ce da ide povratak na prethodnu stranu
 			}
 		} else {
@@ -64,7 +64,7 @@ for (var i = 0; i < answerButton.length; i++) {
 				reset();
 			}, 1000);
 			if (wrong+counter===5) {
-				alert("GOTOVO!!!");
+				roundEnd();
 				//tu ce da ide povratak na prethodnu stranu
 			}
 		}
@@ -100,14 +100,25 @@ function reset () {
 	answerButton[randomSolution].textContent = result;
 
 	document.querySelector(".correct").classList.remove('rightAnswer');
-	 document.querySelector(".wrong").classList.remove("rightAnswer");
+	document.querySelector(".wrong").classList.remove("rightAnswer");
 	document.querySelector(".resultDisplay").classList.remove("appear");
-	 document.querySelector(".resultDisplay").style.display = "inline-block";
+	document.querySelector(".resultDisplay").style.display = "inline-block";
 	for(var i = 0; i < answerButton.length; i++){
 		answerButton[i].classList.remove('fadeOut');
 	}
 }
 
 function bravo(count) {
-	correctAnswers[count].style.backgroundColor = "#688d01"
+	correctAnswers[count].style.backgroundColor = "#00d2e0"
+}
+
+function roundEnd (){
+	wrong, counter = 0;
+	document.querySelector("#answerButtons").classList.add("fadeOut");
+	setTimeout(function(){
+		document.querySelector("#answerButtons").style.display="none";
+		document.querySelector(".countStripe").classList.add("moveUp");
+		reset();
+	}, 1500);
+
 }
