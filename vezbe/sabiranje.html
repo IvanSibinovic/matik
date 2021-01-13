@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description"
+    content="Program za učenje matematike namenjen deci. Sadrži vežbe iz matematike koje pomažu osnovcima da brzo i lako vežbaju sve vrste zadataka koji su predviđeni nastavnim planom i programom.">
+    <meta name="keywords" content="matematika, vežba, vežbanje, mata, osnovna škola">
+    <meta name="author" content="Ivan Sibinovic">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Matik Sabiranje</title>
+	<link rel="stylesheet" type="text/css" href="../matik.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+</head>
+<body>
+	<div class="messageBox correct">Bravo!</div>
+	<div class="messageBox wrong">Greska!</div>
+	<h1>Vežba: 
+	<span class="excerciseName">
+	<select id="cars" name="cars" value="Operacija">
+	  <option value="volvo">Sabiranje</option>
+	  <option value="saab">Oduzimanje</option>
+	  <option value="fiat">Mnozenje</option>
+	  <option value="audi">Deljenje</option>
+	</select>
+ do</span><input type="number" name="limit" id="limit">
+	<button id="submit">potvrdi</button>
+	<br>
+	<span id="equationDisplay"></span><span class="resultDisplay"></span></h1>
+	<h2 id="proba" style="text-align: center;color: #fff;"></h2>
+	<div id="stripe">
+
+	</div>
+	<div class="container">
+		<div id="answerButtons">
+			<div class="answerButton"></div>
+			<div class="answerButton"></div>
+			<div class="answerButton"></div>
+			<div class="answerButton"></div>
+		</div>
+			
+		<div class="countStripe">
+			<div class="count"></div>
+			<div class="count"></div>
+			<div class="count"></div>
+			<div class="count"></div>
+			<div class="count"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/matik.js"></script>
+</body>
+</html>
